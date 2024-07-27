@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .card:hover .select-box {
+        opacity: 1;
+        transition: all;
+        transition-duration: 1.5s;
+      }
+      .card:hover .bag {
+        opacity: 1;
+        transition: all;
+        transition-duration: 1.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navation Bar -->
+    <div
+      class="h-[100vh] bg-cover bg-[url(https://assets-global.website-files.com/645a69e5ff9a553155774bec/646b533352b55a4742f8a51b_photosbyarzu-ouBtQKp_mOM-unsplash.webp)] rounded-b-[30px] relative"
+    >
+      <div
+        class="flex items-center justify-between px-[10px] text-white h-[15vh]"
+      >
+        <div>
+          <img
+            class="w-[150px] h-[150px]"
+            src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645ea1c06ad3112aabbfcc3d_ecommerce-logo-w.svg"
+            alt=""
+          />
+        </div>
+        <!-- mid contect  -->
+        <div class="lg:block hidden">
+          <div class="flex gap-[30px] text-xl">
+            <a href="">Demos</a>
+            <a href="">Clothing</a>
+            <a href="">New</a>
+            <a href="">All Pages</a>
+          </div>
+        </div>
+
+        <!-- right Icon -->
+        <div class="flex gap-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5l-1.5 1.5l-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16A6.5 6.5 0 0 1 3 9.5A6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14S14 12 14 9.5S12 5 9.5 5"
+            />
+          </svg>
+          <div class="relative">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="m239.89 198.12l-14.26-120a16 16 0 0 0-16-14.12H176a48 48 0 0 0-96 0H46.33a16 16 0 0 0-16 14.12l-14.26 120A16 16 0 0 0 20 210.6a16.13 16.13 0 0 0 12 5.4h191.92a16.13 16.13 0 0 0 12.08-5.4a16 16 0 0 0 3.89-12.48M128 32a32 32 0 0 1 32 32H96a32 32 0 0 1 32-32M32 200L46.33 80H80v24a8 8 0 0 0 16 0V80h64v24a8 8 0 0 0 16 0V80h33.75l14.17 120Z"
+              />
+            </svg>
+            <div
+              class="bg-[#B94E31] w-[20px] h-[20px] flex items-center justify-center rounded-full absolute bottom-0 right-0 translate-x-[40%] translate-y-[20%]"
+            >
+              0
+            </div>
+          </div>
+          <div class="">
+            <div
+              class="w-7 h-7 rounded-full bg-[#B94E31] top-[50%] left-[28%] absolute border-[7px] border-[#5A2E1A]"
+            ></div>
+          </div>
+          <div class="">
+            <div
+              class="w-7 h-7 rounded-full bg-[#B94E31] top-[70%] left-[48%] absolute border-[7px] border-[#5A2E1A]"
+            ></div>
+          </div>
+          <div class="">
+            <div
+              class="w-7 h-7 rounded-full bg-[#B94E31] top-[50%] left-[68%] absolute border-[7px] border-[#5A2E1A]"
+            ></div>
+          </div>
+          <div class="">
+            <div
+              class="w-7 h-7 rounded-full bg-[#B94E31] top-[80%] left-[38%] absolute border-[7px] border-[#5A2E1A]"
+            ></div>
+          </div>
+          <div class="lg:hidden block">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Explore by categories -->
+    <div
+      class="flex lg:items-center md:justify-items-start justify-between lg:flex-row flex-col lg:px-[100px] px-[60px] mt-[30px]"
+    >
+      <div class="">
+        <p class="text-[50px]">Explore by categories</p>
+      </div>
+      <div class="flex items-center">
+        <p class="text-[20px] font-light">View More</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M17.073 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.573l-3.735-3.734q-.146-.147-.152-.345t.152-.363q.166-.166.357-.168t.357.162l4.383 4.383q.13.13.183.267t.053.298t-.053.298t-.183.268l-4.383 4.382q-.146.146-.347.153t-.367-.159q-.16-.165-.162-.354t.162-.354z"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- Three card  grid -->
+    <div
+      class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 lg:px-[100px] px-[60px] mt-[30px]"
+    >
+      <div class="relative">
+        <div class="overflow-hidden rounded-lg">
+          <img
+            class="w-full h-[300px] object-top"
+            src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645e27a2a712b0144adc27fa_image%20860.jpg"
+            alt=""
+          />
+        </div>
+        <div
+          class="bg-white absolute bottom-[20px] flex items-center justify-between w-[90%] rounded-[20px] px-[30px] left-[50%] translate-x-[-50%]"
+        >
+          <p
+            class="py-[20px] hover:text-[#b94e31] transition-all cursor-pointer font-bold text-xl"
+          >
+            New Arrivals
+          </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M17.073 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.573l-3.735-3.734q-.146-.147-.152-.345t.152-.363q.166-.166.357-.168t.357.162l4.383 4.383q.13.13.183.267t.053.298t-.053.298t-.183.268l-4.383 4.382q-.146.146-.347.153t-.367-.159q-.16-.165-.162-.354t.162-.354z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="overflow-hidden rounded-lg">
+          <img
+            class="w-full h-[300px] object-fit"
+            src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645e27b41017cba90e63beb5_image%20864.jpg"
+            alt=""
+          />
+        </div>
+        <div
+          class="bg-white absolute bottom-[20px] flex items-center justify-between w-[90%] rounded-[20px] px-[30px] left-[50%] translate-x-[-50%]"
+        >
+          <p
+            class="py-[20px] font-bold text-xl hover:text-[#b94e31] transition-all cursor-pointer"
+          >
+            BestSellers
+          </p>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M17.073 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.573l-3.735-3.734q-.146-.147-.152-.345t.152-.363q.166-.166.357-.168t.357.162l4.383 4.383q.13.13.183.267t.053.298t-.053.298t-.183.268l-4.383 4.382q-.146.146-.347.153t-.367-.159q-.16-.165-.162-.354t.162-.354z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="lg:col-span-1 md:col-span-full flex justify-center">
+        <div class="relative lg:w-full md:w-[50%]">
+          <div class="overflow-hidden rounded-lg">
+            <img
+              class="w-full h-[300px] object-cover"
+              src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645e27caa48dd0809eeaaebb_image%20862.jpg"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="bg-white absolute bottom-[20px] flex items-center justify-between w-[90%] rounded-[20px] px-[30px] left-[50%] translate-x-[-50%]"
+          >
+            <p
+              class="py-[20px] font-bold text-xl hover:text-[#b94e31] cursor-pointer"
+            >
+              Women's Clothing
+            </p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M17.073 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.573l-3.735-3.734q-.146-.147-.152-.345t.152-.363q.166-.166.357-.168t.357.162l4.383 4.383q.13.13.183.267t.053.298t-.053.298t-.183.268l-4.383 4.382q-.146.146-.347.153t-.367-.159q-.16-.165-.162-.354t.162-.354z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Paragraph session  -->
+    <div class="flex flex-col items-center mt-[100px]">
+      <p class="text-4xl lg:w-[50%] w-full text-center">
+        With our versatile product range, we are here to help you go places in
+        style, without compromises.
+      </p>
+      <div class="flex gap-2 mt-[20px] items-center">
+        <p class="hover:text-[#FA593B] transition-all cursor-pointer">
+          LEARN MORE
+        </p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M17.073 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.573l-3.735-3.734q-.146-.147-.152-.345t.152-.363q.166-.166.357-.168t.357.162l4.383 4.383q.13.13.183.267t.053.298t-.053.298t-.183.268l-4.383 4.382q-.146.146-.347.153t-.367-.159q-.16-.165-.162-.354t.162-.354z"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- Three car grid -->
+    <div class="mt-[150px] lg:px-[100px] px-[30px]">
+      <div class="grid md:grid-cols-3 grid-cols-1 gap-5">
+        <!-- first card -->
+        <div>
+          <div class="relative flex rounded-[30px] overflow-hidden">
+            <img
+              src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645d3f698ca0a9562c7dba9e_image%20867.jpg"
+              alt=""
+            />
+            <select
+              name=""
+              id=""
+              class="absolute bottom-[20px] left-[20px] px-[10px] py-[5px] rounded-[25px] bg-[#B94E31] text-white"
+            >
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+            <div
+              class="absolute bottom-[20px] right-[20px] w-[40px] h-[40px] bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white cursor-pointer transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  fill="currentColor"
+                  d="M216 66h-42v-2a46 46 0 0 0-92 0v2H40a14 14 0 0 0-14 14v120a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V80a14 14 0 0 0-14-14M94 64a34 34 0 0 1 68 0v2H94Zm124 136a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2V80a2 2 0 0 1 2-2h42v18a6 6 0 0 0 12 0V78h68v18a6 6 0 0 0 12 0V78h42a2 2 0 0 1 2 2Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <p class="font-semibold text-xl">Leather Crossbody Bag</p>
+          <p class="font-extralight">$ 134.99 USD</p>
+        </div>
+        <!-- Second card -->
+        <div class="relative rounded-[30px] overflow-hidden cursor-pointer">
+          <img
+            class="w-full h-full hover:scale-[1.3] duration-[3s] transition-all"
+            src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645dff0c57c2983bc023d23e_khaled-ghareeb-tJ2KJKR0n2E-unsplash.webp"
+            alt=""
+          />
+          <div
+            class="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]"
+          >
+            <p class="lg:text-5xl text-4xl text-white font-bold text-center">
+              Local Desingners
+            </p>
+            <p class="font-light text-white text-center">view all</p>
+          </div>
+        </div>
+        <!-- third card -->
+        <div>
+          <div class="relative flex rounded-[30px] overflow-hidden">
+            <img
+              src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645d3b1163dfb01f70822df8_image%20873-p-800.jpg"
+              alt=""
+            />
+            <div class="flex flex-col bottom-[20px] absolute left-[20px] gap-4">
+              <select
+                name=""
+                id=""
+                class="px-[10px] py-[5px] rounded-[25px] bg-[#B94E31] text-white"
+              >
+                <option value="">Red</option>
+                <option value="">Blue</option>
+              </select>
+              <select
+                name=""
+                id=""
+                class="px-[10px] py-[5px] rounded-[25px] bg-[#B94E31] text-white"
+              >
+                <option value="">Size</option>
+                <option value="">Blue</option>
+              </select>
+            </div>
+
+            <div
+              class="absolute bottom-[20px] right-[20px] w-[40px] h-[40px] bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white cursor-pointer transition-all"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  fill="currentColor"
+                  d="M216 66h-42v-2a46 46 0 0 0-92 0v2H40a14 14 0 0 0-14 14v120a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V80a14 14 0 0 0-14-14M94 64a34 34 0 0 1 68 0v2H94Zm124 136a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2V80a2 2 0 0 1 2-2h42v18a6 6 0 0 0 12 0V78h68v18a6 6 0 0 0 12 0V78h42a2 2 0 0 1 2 2Z"
+                />
+              </svg>
+            </div>
+          </div>
+          <p class="font-semibold text-xl">Leather Crossbody Bag</p>
+          <p class="font-extralight">$ 134.99 USD</p>
+        </div>
+      </div>
+    </div>
+    <!-- High Waisted Jeans -->
+    <div class="mt-[100px] lg:px-[100px] px-[30px]">
+      <div
+        class="border-2 border-black rounded-lg overflow-hidden flex lg:flex-row flex-col"
+      >
+        <!-- left -->
+        <div class="lg:w-[50%] w-full object-fill">
+          <img
+            class="w-full h-full"
+            src="https://uploads-ssl.webflow.com/645a69e6ff9a558805774bf2/645e5f06faede6dd48ebd16b_ryan-moreno-RI_Z2e7ibM8-unsplash.jpg"
+            alt=""
+          />
+        </div>
+        <!-- Right -->
+        <div class="px-[30px] py-[100px] lg:w-[50%] w-full h-full">
+          <h1 class="text-5xl font-bold">High Waisted Jeans</h1>
+          <p class="text-3xl py-5">$ 35.00 USD</p>
+          <div class="flex gap-4 py-3 border-b-2 w-[40%] pb-1">
+            <p class="font-bold">Info</p>
+            <p>Details</p>
+            <p>Shipping</p>
+          </div>
+          <p class="text-left font-light mt-4">
+            Get ready to elevate your denim game with our stylish and versatile
+            high waisted jeans. These jeans are designed to flatter your figure
+            and provide a comfortable fit that accentuates your curves. The
+            high-rise waistline not only elongates your legs but also offers a
+            sleek and slimming effect.
+          </p>
+          <!-- Color & Size Session -->
+          <div class="mt-[50px] flex gap-[70px]">
+            <!-- Left -->
+            <div>
+              <div class="flex gap-6">
+                <p class="font-semibold">Color</p>
+                <p class="font-light">Black</p>
+              </div>
+              <!-- Left color Circle -->
+              <div class="flex gap-2 mt-4">
+                <div
+                  class="w-7 h-7 border-2 border-cyan-100 rounded-full flex items-center justify-center"
+                >
+                  <div class="w-5 h-5 bg-cyan-700 rounded-full"></div>
+                </div>
+                <div
+                  class="w-7 h-7 border-2 rounded-full flex items-center justify-center"
+                >
+                  <div class="w-5 h-5 bg-amber-700 rounded-full"></div>
+                </div>
+                <div
+                  class="w-7 h-7 border-2 rounded-full flex items-center justify-center"
+                >
+                  <div class="w-5 h-5 bg-black rounded-full"></div>
+                </div>
+              </div>
+            </div>
+            <!-- Right Size  -->
+            <div>
+              <div class="flex gap-8">
+                <p class="font-semibold">Size</p>
+                <p class="font-light">L</p>
+              </div>
+              <!-- Left color Circle -->
+              <div class="flex gap-2 mt-4">
+                <div
+                  class="w-7 h-7 rounded-full border flex items-center justify-center text-sm"
+                >
+                  Xs
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full border flex items-center justify-center text-sm"
+                >
+                  S
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full border flex items-center justify-center text-sm"
+                >
+                  M
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full border border-black flex items-center justify-center text-sm"
+                >
+                  L
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Last buttom & input -->
+          <div class="mt-[50px]">
+            <p class="font-semibold">Quantity</p>
+          </div>
+
+          <div class="mt-[20px] flex items-center justify-center">
+            <div>
+              <input
+                type="number"
+                class="border-b-[1px] border-black w-[50%] focus:outline-none h-[50px]"
+              />
+            </div>
+            <div class="w-[100%]">
+              <button
+                class="bg-[#B94E31] w-full rounded-[30px] py-4 text-white hover:bg-cyan-900"
+              >
+                Add to cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Card Sentence -->
+    <div class="mt-[50px] lg:px-[100px] px-[30px]">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-3">
+        <div class="flex flex-col items-center gap-4">
+          <img
+            class="w-[50px]"
+            src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e4fc52c07685fac5c9191_package.svg"
+            alt=""
+          />
+          <h1 class="font-semibold text-2xl text-center">
+            Returns & exchanges
+          </h1>
+          <p class="text-center text-sm">
+            We strive to make fashion accessible to everyone, no matter your
+            budget.
+          </p>
+        </div>
+        <div class="flex flex-col items-center gap-4">
+          <img
+            class="w-[50px]"
+            src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e4fc48afcb1c31ba34ad6_delivery-truck.svg"
+            alt=""
+          />
+          <h1 class="font-semibold text-2xl text-center">
+            Returns & exchanges
+          </h1>
+          <p class="text-center text-sm text-center text-sm">
+            We strive to make fashion accessible to everyone, no matter your
+            budget.
+          </p>
+        </div>
+        <div class="lg:col-span-1 col-span-full">
+          <div class="flex flex-col items-center gap-4">
+            <img
+              class="w-[50px]"
+              src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e4fc4e8f6f6f8d668931d_24-hours-support.svg"
+              alt=""
+            />
+            <h1 class="font-semibold text-2xl text-center">
+              Returns & exchanges
+            </h1>
+            <p class="text-center text-sm lg:w-full md:w-[50%] sm:w-auto">
+              We strive to make fashion accessible to everyone, no matter your
+              budget.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bag photo image session -->
+    <div class="mt-[50px] lg:px-[100px] px-[30px]">
+      <div class="flex lg:flex-row flex-col rounded-[30px] overflow-hidden">
+        <div
+          class="lg:w-[50%] w-full md:py-[80px] py-[20px] md:px-[50px] px-[10px] gap-[10px] bg-[#495f11] text-white flex flex-col md:text-left text-center"
+        >
+          <div>
+            <h1 class="lg:text-5xl text-2xl">Casual weekend getaway</h1>
+          </div>
+          <div>
+            <p
+              class="md:py-5 py-2 md:font-normal font-thin lg:text-lg md:text-md text-base"
+            >
+              are here to help you go places in style, without any compromises.
+              So With our versatile product range and commitment to
+              affordability, we why not browse our collections today and let us
+              help you achieve your fashion goals with ease!
+            </p>
+          </div>
+          <div>
+            <button
+              class="bg-[#B94E31] px-7 py-4 rounded-[30px] hover:bg-white hover:text-black transition duration-700"
+            >
+              Shop All
+            </button>
+          </div>
+        </div>
+        <div class="lg:w-[50%] w-full">
+          <img
+            class="object-fill h-full w-full"
+            src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/6479293f5a7265e699790d55_kevs-VsnjiMUt7Cg-unsplash%20(1).webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="mt-[50px] lg:px-[100px] px-[30px] flex flex-col items-center text-center gap-3"
+    >
+      <h1 class="font-bold text-4xl">Smooth shopping experience</h1>
+      <p class="lg:w-[70%] w-full font-normal">
+        We are dedicated to curating a wide range of high-quality, stylish
+        products that cater to different tastes and preferences. Our goal is to
+        help you look and feel confident.
+      </p>
+    </div>
+    <!-- Image Rotate  -->
+    <div class="overflow-hidden mt-[100px] lg:px-[50px] px-[10px]">
+      <div
+        class="lg:w-full w-[1000px] py-3 lg:translate-x-[0px] translate-x-[-100px]"
+      >
+        <div class="grid grid-cols-5">
+          <img
+            class="rotate-[-6deg] rounded-[30px] border w-full h-[300px] object-fill"
+            src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/6479293f997f9f031a40344e_pexels-cottonbro-studio-10669854%20(1)-p-500.webp"
+            alt=""
+          />
+          <img
+            class="rotate-6 rounded-[30px] border w-[230px] h-[300px] object-fill"
+            src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645d2eba3523924c6fdb0f6b_reynier-carl-87m1_NfKld4-unsplash-p-500.webp"
+            alt=""
+          />
+          <img
+            class="rotate-[-5deg] rounded-[30px] border w-[230px] h-[300px] object-fill"
+            src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645d1c4536b2315d4035a7f3_helen-ngoc-n-2Gdd6TIImc0-unsplash-p-500.webp"
+            alt=""
+          />
+          <img
+            class="rotate-[-13deg] rounded-[30px] border w-[230px] h-[300px] object-cover"
+            src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645dff0c53c544e081d48a2d_tamara-bellis-nOnT17lKYz8-unsplash-p-500.webp"
+            alt=""
+          />
+          <img
+            class="rotate-6 rounded-[30px] border w-[230px] h-[300px] object-cover"
+            src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645df76b825a96ec23ff6bc0_banner-h1-2-p-500.webp"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+    <div class="mt-[30px] flex justify-center items-center gap-3">
+      <p
+        class="hover:text-[#B94E31] transition-all duration-700 font-light text-xl"
+      >
+        Learn More
+      </p>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 24 24"
+      >
+        <path
+          fill="currentColor"
+          d="M17.073 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.573l-3.735-3.734q-.146-.147-.152-.345t.152-.363q.166-.166.357-.168t.357.162l4.383 4.383q.13.13.183.267t.053.298t-.053.298t-.183.268l-4.383 4.382q-.146.146-.347.153t-.367-.159q-.16-.165-.162-.354t.162-.354z"
+        />
+      </svg>
+    </div>
+    <!-- Check Our Section  -->
+    <div class="mt-[100px] flex flex-col items-center gap-5">
+      <p class="font-semibold text-4xl">Check our selection</p>
+      <div class="flex flex-wrap gap-5 px-3 justify-center">
+        <button class="border bg-[#495f11] rounded-[30px] px-5 py-3 text-white">
+          New Arrivals
+        </button>
+        <button
+          class="border border-[#495f11] rounded-[30px] px-5 py-3 hover:text-[#B94E31] transition-all duration-700"
+        >
+          BestSellers
+        </button>
+        <button
+          class="border border-[#495f11] rounded-[30px] px-5 py-3 hover:text-[#B94E31] transition-all duration-700"
+        >
+          Swimwear
+        </button>
+        <button
+          class="border border-[#495f11] rounded-[30px] px-5 py-3 hover:text-[#B94E31] transition-all duration-700"
+        >
+          Denim Collection
+        </button>
+      </div>
+    </div>
+    <!-- Eight Image -->
+    <div
+      class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 p-4 px-[50px] mt-[20px]"
+    >
+      <div class="card">
+        <div class="relative cursor-pointer">
+          <img
+            class="rounded-[30px]"
+            src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645d4046e126a5bcffaaa65c_image%20866-p-500.jpg"
+            alt=""
+          />
+          <div
+            class="absolute opacity-0 select-box bottom-[20px] left-[20px] flex flex-col gap-3 opacity-0 :opacity-100"
+          >
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+          </div>
+
+          <div
+            class="absolute opacity-0 bag bottom-[20px] right-[20px] w-[40px] h-[40px] bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white cursor-pointer transition-all"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M216 66h-42v-2a46 46 0 0 0-92 0v2H40a14 14 0 0 0-14 14v120a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V80a14 14 0 0 0-14-14M94 64a34 34 0 0 1 68 0v2H94Zm124 136a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2V80a2 2 0 0 1 2-2h42v18a6 6 0 0 0 12 0V78h68v18a6 6 0 0 0 12 0V78h42a2 2 0 0 1 2 2Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div>
+          <h1
+            class="font-semibold text-xl hover:text-[#B94E31] transition-all duration-700"
+          >
+            High-leg Cut-out Swimsuit
+          </h1>
+          <p>$ 25.99 USD</p>
+        </div>
+      </div>
+      <!-- second  -->
+      <div class="card">
+        <div class="relative cursor-pointer">
+          <img
+            class="rounded-[30px]"
+            src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645d3f698ca0a9562c7dba9e_image%20867-p-500.jpg"
+            alt=""
+          />
+          <div
+            class="absolute opacity-0 select-box bottom-[20px] left-[20px] flex flex-col gap-3 opacity-0 :opacity-100"
+          >
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+          </div>
+
+          <div
+            class="absolute opacity-0 bottom-[20px] right-[20px] w-[40px] h-[40px] bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white cursor-pointer transition-all"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M216 66h-42v-2a46 46 0 0 0-92 0v2H40a14 14 0 0 0-14 14v120a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V80a14 14 0 0 0-14-14M94 64a34 34 0 0 1 68 0v2H94Zm124 136a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2V80a2 2 0 0 1 2-2h42v18a6 6 0 0 0 12 0V78h68v18a6 6 0 0 0 12 0V78h42a2 2 0 0 1 2 2Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="py-3">
+          <h1
+            class="font-semibold text-xl hover:text-[#B94E31] transition-all duration-700"
+          >
+            Leather Crossbody Bag
+          </h1>
+          <p>$ 25.99 USD</p>
+        </div>
+      </div>
+      <!-- third  -->
+      <div class="card">
+        <div class="border rounded-[30px] relative cursor-pointer">
+          <img
+            class="rounded-[30px]"
+            src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645d3ee0f73d9db4f544d18b_image%20868-p-500.jpg"
+            alt=""
+          />
+          <div
+            class="absolute opacity-0 select-box bottom-[20px] left-[20px] flex flex-col gap-3 opacity-0 :opacity-100"
+          >
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+          </div>
+
+          <div
+            class="absolute opacity-0 bag bottom-[20px] right-[20px] w-[40px] h-[40px] bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white cursor-pointer transition-all"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M216 66h-42v-2a46 46 0 0 0-92 0v2H40a14 14 0 0 0-14 14v120a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V80a14 14 0 0 0-14-14M94 64a34 34 0 0 1 68 0v2H94Zm124 136a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2V80a2 2 0 0 1 2-2h42v18a6 6 0 0 0 12 0V78h68v18a6 6 0 0 0 12 0V78h42a2 2 0 0 1 2 2Z"
+              />
+            </svg>
+          </div>
+          <div
+            class="absolute top-0 right-5 bg-[#b54d31] rounded-[30px] rotate-[-10deg] translate-y-[-20px]"
+          >
+            <p class="px-4 py-1 text-white">-25%</p>
+          </div>
+        </div>
+
+        <div class="py-3">
+          <h1
+            class="font-semibold text-xl hover:text-[#B94E31] transition-all duration-700"
+          >
+            Long Draped Silk Dress
+          </h1>
+          <p>$ 25.99 USD</p>
+        </div>
+      </div>
+      <!-- fourth  -->
+      <div class="card">
+        <div class="relative cursor-pointer">
+          <img
+            class="rounded-[30px]"
+            src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645d3d0385bd184674897b9b_image%20869-p-500.jpg"
+            alt=""
+          />
+          <div
+            class="absolute opacity-0 select-box bottom-[20px] left-[20px] flex flex-col gap-3 opacity-0 :opacity-100"
+          >
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+          </div>
+
+          <div
+            class="absolute opacity-0 bag bottom-[20px] right-[20px] w-[40px] h-[40px] bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white cursor-pointer transition-all"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M216 66h-42v-2a46 46 0 0 0-92 0v2H40a14 14 0 0 0-14 14v120a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V80a14 14 0 0 0-14-14M94 64a34 34 0 0 1 68 0v2H94Zm124 136a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2V80a2 2 0 0 1 2-2h42v18a6 6 0 0 0 12 0V78h68v18a6 6 0 0 0 12 0V78h42a2 2 0 0 1 2 2Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="py-3">
+          <h1
+            class="font-semibold text-xl hover:text-[#B94E31] transition-all duration-700"
+          >
+            Green Crochet Set With Blazer
+          </h1>
+          <p>$ 25.99 USD</p>
+        </div>
+      </div>
+      <!-- fifth  -->
+      <div class="card">
+        <div class="border rounded-[30px] relative cursor-pointer">
+          <img
+            class="rounded-[30px]"
+            src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645d3c22da4f2744fa93f367_malik-skydsgaard-CF7fo5yrmUs-unsplash.png-p-500.jpg"
+            alt=""
+          />
+          <div
+            class="absolute opacity-0 select-box bottom-[20px] left-[20px] flex flex-col gap-3 opacity-0 :opacity-100"
+          >
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+          </div>
+
+          <div
+            class="absolute opacity-0 bag bottom-[20px] right-[20px] w-[40px] h-[40px] bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white cursor-pointer transition-all"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M216 66h-42v-2a46 46 0 0 0-92 0v2H40a14 14 0 0 0-14 14v120a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V80a14 14 0 0 0-14-14M94 64a34 34 0 0 1 68 0v2H94Zm124 136a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2V80a2 2 0 0 1 2-2h42v18a6 6 0 0 0 12 0V78h68v18a6 6 0 0 0 12 0V78h42a2 2 0 0 1 2 2Z"
+              />
+            </svg>
+          </div>
+          <div
+            class="absolute top-0 right-5 bg-[#b54d31] rounded-[30px] rotate-[-10deg] translate-y-[-20px]"
+          >
+            <p class="px-4 py-1 text-white">-10%</p>
+          </div>
+        </div>
+
+        <div class="py-3">
+          <h1
+            class="font-semibold text-xl hover:text-[#B94E31] transition-all duration-700"
+          >
+            Unisex Flannel Shirt
+          </h1>
+          <div class="flex gap-3">
+            <p>$ 25.99 USD</p>
+            <p class="font-semibold line-through">$ 26.00 USD</p>
+          </div>
+        </div>
+      </div>
+      <!-- six  -->
+      <div class="card">
+        <div class="relative cursor-pointer">
+          <img
+            class="rounded-[30px]"
+            src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645d3bb923b2e6668455087d_image%20874-p-500.jpg"
+            alt=""
+          />
+          <div
+            class="absolute opacity-0 select-box bottom-[20px] left-[20px] flex flex-col gap-3 opacity-0 :opacity-100"
+          >
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+          </div>
+
+          <div
+            class="absolute opacity-0 bag bottom-[20px] right-[20px] w-[40px] h-[40px] bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white cursor-pointer transition-all"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M216 66h-42v-2a46 46 0 0 0-92 0v2H40a14 14 0 0 0-14 14v120a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V80a14 14 0 0 0-14-14M94 64a34 34 0 0 1 68 0v2H94Zm124 136a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2V80a2 2 0 0 1 2-2h42v18a6 6 0 0 0 12 0V78h68v18a6 6 0 0 0 12 0V78h42a2 2 0 0 1 2 2Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="py-3">
+          <h1
+            class="font-semibold text-xl hover:text-[#B94E31] transition-all duration-700"
+          >
+            Colorful Maxi Dress
+          </h1>
+          <p>$ 25.99 USD</p>
+        </div>
+      </div>
+      <!-- seven -->
+      <div class="card">
+        <div class="relative cursor-pointer">
+          <img
+            class="rounded-[30px]"
+            src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645d3b1163dfb01f70822df8_image%20873-p-500.jpg"
+            alt=""
+          />
+          <div
+            class="absolute opacity-0 select-box bottom-[20px] left-[20px] flex flex-col gap-3 opacity-0 :opacity-100"
+          >
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+          </div>
+
+          <div
+            class="absolute opacity-0 bag bottom-[20px] right-[20px] w-[40px] h-[40px] bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white cursor-pointer transition-all"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M216 66h-42v-2a46 46 0 0 0-92 0v2H40a14 14 0 0 0-14 14v120a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V80a14 14 0 0 0-14-14M94 64a34 34 0 0 1 68 0v2H94Zm124 136a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2V80a2 2 0 0 1 2-2h42v18a6 6 0 0 0 12 0V78h68v18a6 6 0 0 0 12 0V78h42a2 2 0 0 1 2 2Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="py-3">
+          <h1
+            class="font-semibold text-xl hover:text-[#B94E31] transition-all duration-700"
+          >
+            Black One-piece Swimsuit
+          </h1>
+          <p>$ 25.99 USD</p>
+        </div>
+      </div>
+      <!-- Eight  -->
+      <div class="card">
+        <div class="relative cursor-pointer">
+          <img
+            class="rounded-[30px]"
+            src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645d39d8da4f2744fa9134b0_image%20872-p-500.jpg"
+            alt=""
+          />
+          <div
+            class="absolute opacity-0 select-box bottom-[20px] left-[20px] flex flex-col gap-3 opacity-0 :opacity-100"
+          >
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+            <select class="px-[10px] py-[5px] rounded-[25px]">
+              <option value="">Red</option>
+              <option value="">Blue</option>
+            </select>
+          </div>
+
+          <div
+            class="absolute opacity-0 bag bottom-[20px] right-[20px] w-[40px] h-[40px] bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white cursor-pointer transition-all"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M216 66h-42v-2a46 46 0 0 0-92 0v2H40a14 14 0 0 0-14 14v120a14 14 0 0 0 14 14h176a14 14 0 0 0 14-14V80a14 14 0 0 0-14-14M94 64a34 34 0 0 1 68 0v2H94Zm124 136a2 2 0 0 1-2 2H40a2 2 0 0 1-2-2V80a2 2 0 0 1 2-2h42v18a6 6 0 0 0 12 0V78h68v18a6 6 0 0 0 12 0V78h42a2 2 0 0 1 2 2Z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="py-3">
+          <h1
+            class="font-semibold text-xl hover:text-[#B94E31] transition-all duration-700"
+          >
+            Glamour Pink Bow Dress
+          </h1>
+          <p class="text-l">$ 25.99 USD</p>
+        </div>
+      </div>
+    </div>
+    <!-- card 3  -->
+    <div class="mt-[100px]">
+      <div class="grid lg:grid-cols-3 grid-cols-1 px-[50px] gap-[30px]">
+        <div
+          class="border-4 border-black rounded-2xl flex flex-col justify-evenly px-[30px] lg:py-[40px] py-[60px] gap-[20px] relative"
+        >
+          <div class="">
+            <p class="font-light">
+              "What sets them apart from other online stores is their attention
+              to detail - the packaging is beautiful and the items are delivered
+              on time."
+            </p>
+          </div>
+
+          <div class="flex gap-3 items-center">
+            <div class="">
+              <img
+                class="w-[60px] h-[60px] rounded-full"
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645a69e6ff9a55acf3774c78_Member-Photo-Close-up-7.webp"
+                alt=""
+              />
+            </div>
+            <div>
+              <h1 class="font-semibold">Ronald Richards</h1>
+              <p>Milan, Italy</p>
+            </div>
+            <div
+              class="absolute top-0 right-5 flex translate-y-[-65%] bg-white"
+            >
+              <img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- second card  -->
+        <div
+          class="border-4 border-black rounded-2xl flex flex-col justify-evenly px-[30px] lg:py-[40px] py-[60px] relative"
+        >
+          <div class="">
+            <p class="font-light">
+              "Their collection is always on-trend and high-quality, and I can
+              always find something that fits my personal style. I will
+              definitely order more!"
+            </p>
+          </div>
+
+          <div class="flex gap-3 items-center">
+            <div class="">
+              <img
+                class="w-[60px] h-[60px] rounded-full"
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645a69e6ff9a558314774c72_Member-Photo-Close-up-3.webp"
+                alt=""
+              />
+            </div>
+            <div>
+              <h1 class="font-semibold">Theresa Webb</h1>
+              <p>Paris, France</p>
+            </div>
+            <div
+              class="absolute top-0 right-5 flex translate-y-[-65%] bg-white"
+            >
+              <img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <!-- third card  -->
+        <div
+          class="border-4 border-black rounded-2xl flex flex-col justify-evenly px-[30px] lg:py-[40px] py-[60px] relative"
+        >
+          <div class="">
+            <p class="font-light">
+              "The best part is that their customer service is fantastic. I
+              would highly recommend this store to anyone looking for great
+              fashion finds."
+            </p>
+          </div>
+
+          <div class="flex gap-3 items-center">
+            <div class="">
+              <img
+                class="w-[60px] h-[60px] rounded-full"
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645a69e6ff9a5573ec774c77_Member-Photo-Close-up-9.webp"
+                alt=""
+              />
+            </div>
+            <div>
+              <h1 class="font-semibold">Jessica Robinson</h1>
+              <p>London, United Kingdom</p>
+            </div>
+            <div
+              class="absolute top-0 right-5 flex translate-y-[-65%] bg-white"
+            >
+              <img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              /><img
+                src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645e3b39b582ecf84e0a4f0c_favourite%20(1).svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sing up session  -->
+    <div class="flex flex-col gap-3 items-center mt-[100px] mb-[100px]">
+      <h1 class="font-semibold text-4xl text-center">
+        Sign up to get a discount
+      </h1>
+      <p class="lg:w-[55%] w-[80%] text-center font-light">
+        We strive to make fashion accessible to everyone, no matter your budget.
+        We are dedicated to curating a wide range of high-quality,
+      </p>
+      <div class="flex md:flex-row flex-col gap-3 mt-3">
+        <input
+          type="email"
+          class="border border-black rounded-[40px] px-3 py-3 w-[300px] focus:outline-none focus:border-[#B94E31]"
+          placeholder="Your Email adress"
+        />
+        <button class="bg-[#B94E31] rounded-[30px] px-6 py-3 text-white">
+          Subscribe
+        </button>
+      </div>
+    </div>
+    <!-- Feature Blog Post -->
+    <div
+      class="flex lg:flex-row flex-col lg:items-center md:justify-items-start justify-between px-[50px] mt-[30px]"
+    >
+      <div class="">
+        <p class="text-[50px]">Featured Blog Posts For You</p>
+      </div>
+      <div class="flex items-center">
+        <p
+          class="text-[20px] font-light hover:text-[#B94E31] cursor-pointer transition-all duration-700"
+        >
+          View More
+        </p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+        >
+          <path
+            fill="currentColor"
+            d="M17.073 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.573l-3.735-3.734q-.146-.147-.152-.345t.152-.363q.166-.166.357-.168t.357.162l4.383 4.383q.13.13.183.267t.053.298t-.053.298t-.183.268l-4.383 4.382q-.146.146-.347.153t-.367-.159q-.16-.165-.162-.354t.162-.354z"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- three Image -->
+    <div class="px-[50px] mt-[20px]">
+      <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
+        <div>
+          <div class="w-full h-[250px] overflow-hidden rounded-[20px]">
+            <img
+              class="hover:scale-[1.2] duration-[3s] transition-all object-fill w-full h-full"
+              src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/6477ce08d4c503f66b4360ab_pexels-gustavo-fring-4254146-p-800.jpg"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col gap-5 py-3">
+            <h1 class="text-2xl font-semibold">
+              Effortless elegance: the minimalist fashion movement
+            </h1>
+            <p class="font-light w-[80%]">
+              From bold prints to statement accessories, discover how to elevate
+              your style
+            </p>
+            <div class="flex gap-3 items-center">
+              <p class="text-xl font-normal">Read More</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M17.073 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.573l-3.735-3.734q-.146-.147-.152-.345t.152-.363q.166-.166.357-.168t.357.162l4.383 4.383q.13.13.183.267t.053.298t-.053.298t-.183.268l-4.383 4.382q-.146.146-.347.153t-.367-.159q-.16-.165-.162-.354t.162-.354z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="w-full h-[250px] overflow-hidden rounded-[20px]">
+            <img
+              class="hover:scale-[1.2] duration-[3s] transition-all object-fill w-full h-full"
+              src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/6477ce5c171f5c364a397eca_pexels-karolina-grabowska-4464819-p-800.jpg"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col gap-5 py-3">
+            <h1 class="text-2xl font-semibold">
+              Power dessing: channeling confidence through fashion
+            </h1>
+            <p class="font-light w-[80%]">
+              From bold prints to statement accessories, discover how to elevate
+              your style
+            </p>
+            <div class="flex gap-3 items-center">
+              <p class="text-xl font-normal">Read More</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="32"
+                height="32"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="currentColor"
+                  d="M17.073 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.573l-3.735-3.734q-.146-.147-.152-.345t.152-.363q.166-.166.357-.168t.357.162l4.383 4.383q.13.13.183.267t.053.298t-.053.298t-.183.268l-4.383 4.382q-.146.146-.347.153t-.367-.159q-.16-.165-.162-.354t.162-.354z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-1 md:col-span-full flex flex-col items-center">
+          <div class="lg:w-full md:w-[50%] w-full">
+            <div class="h-[250px] overflow-hidden rounded-[20px]">
+              <img
+                class="hover:scale-[1.2] duration-[3s] transition-all object-fill w-full h-full"
+                src="https://assets-global.website-files.com/645a69e6ff9a558805774bf2/645e5b20af9e638e3bf32689_juno-jo-LPkyCyA0A40-unsplash-p-800.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="flex flex-col gap-5 py-3">
+              <h1 class="text-2xl font-semibold">
+                5 fashion trends to try this season
+              </h1>
+              <p class="font-light w-[80%]">
+                From bold prints to statement accessories, discover how to
+                elevate your style
+              </p>
+              <div class="flex gap-3 items-center">
+                <p class="text-xl font-normal">Read More</p>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M17.073 12.5H5.5q-.213 0-.357-.143T5 12t.143-.357t.357-.143h11.573l-3.735-3.734q-.146-.147-.152-.345t.152-.363q.166-.166.357-.168t.357.162l4.383 4.383q.13.13.183.267t.053.298t-.053.298t-.183.268l-4.383 4.382q-.146.146-.347.153t-.367-.159q-.16-.165-.162-.354t.162-.354z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer  -->
+    <div
+      class="mt-[100px] bg-[#04322f] lg:h-[80vh] md:h-[130vh] h-[150vh] relative overflow-hidden"
+    >
+      <div
+        class="grid lg:grid-cols-4 grid-cols-3 text-white py-[60px] lg:px-[50px] px-[20px]"
+      >
+        <div class="flex flex-col gap-4">
+          <div>
+            <h1 class="font-semibold text-2xl">Info</h1>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Our Story
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              FAQ
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Our Blog
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Gifts
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div>
+            <h1 class="font-semibold text-2xl">Shop</h1>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Party Wear
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Office Wear
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Wedding
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Local Desingners
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Denim Collection
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              On Sale
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Dresses
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div>
+            <h1 class="font-semibold text-2xl">Help</h1>
+          </div>
+          <div class="flex flex-col gap-4">
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Customer Service
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Return & Exchanges
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Shipping Information
+            </p>
+            <p
+              class="font-light md:text-base text-sm hover:text-[#b94e31] duration-700"
+            >
+              Terms Of Service
+            </p>
+          </div>
+        </div>
+        <div class="lg:col-span-1 col-span-full w-full">
+          <h1 class="font-semibold text-2xl">Become a member</h1>
+          <div class="flex lg:flex-col md:flex-row flex-col py-4 gap-3">
+            <div class="lg:w-full md:w-[75%]">
+              <input
+                type="email"
+                name=""
+                id=""
+                class="py-4 w-full px-5 rounded-[30px] border text-black focus:outline-none focus:border-[#b94e31]"
+                placeholder="Your email addresss"
+              />
+            </div>
+            <div class="lg:w-full md:w-[25%]">
+              <button
+                class="bg-[#b94e31] w-full py-4 rounded-[30px] hover:bg-[#495F11] duration-500"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="flex justify-between lg:px-[50px] px-[10px] items-center md:flex-row flex-col gap-4"
+      >
+        <div class="flex flex-col gap-4 md:items-start items-center">
+          <div>
+            <img
+              class="w-[150px]"
+              src="https://assets-global.website-files.com/645a69e5ff9a553155774bec/645ea1c06ad3112aabbfcc3d_ecommerce-logo-w.svg"
+              alt=""
+            />
+          </div>
+          <div>
+            <p class="text-white font-light text-base">
+              © eCommerce. All Rights Reserved 2024. Licensing
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex gap-5 md:justify-end justify-center">
+            <svg
+              class="text-white hover:text-[#B94E31]"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="-7 -2 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M2.046 3.865v2.748H.032v3.36h2.014v9.986H6.18V9.974h2.775s.26-1.611.386-3.373H6.197V4.303c0-.343.45-.805.896-.805h2.254V0H6.283c-4.34 0-4.237 3.363-4.237 3.865"
+              />
+            </svg>
+            <svg
+              class="text-white hover:text-[#B94E31]"
+              class="text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M11.999 7.377a4.623 4.623 0 1 0 0 9.248a4.623 4.623 0 0 0 0-9.248m0 7.627a3.004 3.004 0 1 1 0-6.008a3.004 3.004 0 0 1 0 6.008"
+              />
+              <circle cx="16.806" cy="7.207" r="1.078" fill="currentColor" />
+              <path
+                fill="currentColor"
+                d="M20.533 6.111A4.605 4.605 0 0 0 17.9 3.479a6.606 6.606 0 0 0-2.186-.42c-.963-.042-1.268-.054-3.71-.054s-2.755 0-3.71.054a6.554 6.554 0 0 0-2.184.42a4.6 4.6 0 0 0-2.633 2.632a6.585 6.585 0 0 0-.419 2.186c-.043.962-.056 1.267-.056 3.71c0 2.442 0 2.753.056 3.71c.015.748.156 1.486.419 2.187a4.61 4.61 0 0 0 2.634 2.632a6.584 6.584 0 0 0 2.185.45c.963.042 1.268.055 3.71.055s2.755 0 3.71-.055a6.615 6.615 0 0 0 2.186-.419a4.613 4.613 0 0 0 2.633-2.633c.263-.7.404-1.438.419-2.186c.043-.962.056-1.267.056-3.71s0-2.753-.056-3.71a6.581 6.581 0 0 0-.421-2.217m-1.218 9.532a5.043 5.043 0 0 1-.311 1.688a2.987 2.987 0 0 1-1.712 1.711a4.985 4.985 0 0 1-1.67.311c-.95.044-1.218.055-3.654.055c-2.438 0-2.687 0-3.655-.055a4.96 4.96 0 0 1-1.669-.311a2.985 2.985 0 0 1-1.719-1.711a5.08 5.08 0 0 1-.311-1.669c-.043-.95-.053-1.218-.053-3.654c0-2.437 0-2.686.053-3.655a5.038 5.038 0 0 1 .311-1.687c.305-.789.93-1.41 1.719-1.712a5.01 5.01 0 0 1 1.669-.311c.951-.043 1.218-.055 3.655-.055s2.687 0 3.654.055a4.96 4.96 0 0 1 1.67.311a2.991 2.991 0 0 1 1.712 1.712a5.08 5.08 0 0 1 .311 1.669c.043.951.054 1.218.054 3.655c0 2.436 0 2.698-.043 3.654z"
+              />
+            </svg>
+            <svg
+              class="text-white hover:text-[#B94E31]"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 512 512"
+            >
+              <path
+                fill="currentColor"
+                d="M496 109.5a201.8 201.8 0 0 1-56.55 15.3a97.5 97.5 0 0 0 43.33-53.6a197.7 197.7 0 0 1-62.56 23.5A99.14 99.14 0 0 0 348.31 64c-54.42 0-98.46 43.4-98.46 96.9a93.2 93.2 0 0 0 2.54 22.1a280.7 280.7 0 0 1-203-101.3A95.7 95.7 0 0 0 36 130.4c0 33.6 17.53 63.3 44 80.7A97.5 97.5 0 0 1 35.22 199v1.2c0 47 34 86.1 79 95a100.8 100.8 0 0 1-25.94 3.4a94.4 94.4 0 0 1-18.51-1.8c12.51 38.5 48.92 66.5 92.05 67.3A199.6 199.6 0 0 1 39.5 405.6a203 203 0 0 1-23.5-1.4A278.7 278.7 0 0 0 166.74 448c181.36 0 280.44-147.7 280.44-275.8c0-4.2-.11-8.4-.31-12.5A198.5 198.5 0 0 0 496 109.5"
+              />
+            </svg>
+            <svg
+              class="text-white hover:text-[#B94E31]"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 256 256"
+            >
+              <path
+                fill="currentColor"
+                d="M128 20a108 108 0 1 0 108 108A108.12 108.12 0 0 0 128 20m83.13 96h-3.12a172.6 172.6 0 0 0-41.39 5.06A171 171 0 0 0 156 97.39a172.3 172.3 0 0 0 32.9-27.15A83.7 83.7 0 0 1 211.13 116M170 55.3a148.5 148.5 0 0 1-27 21.88a173.3 173.3 0 0 0-30.58-31.71A83.52 83.52 0 0 1 170 55.3m-84.46.27a149.2 149.2 0 0 1 35.9 32.87A147.7 147.7 0 0 1 64 100c-5 0-10-.26-14.94-.75a84.5 84.5 0 0 1 36.47-43.68ZM44 128c0-1.73.07-3.44.17-5.14A175 175 0 0 0 64 124a171.8 171.8 0 0 0 70.84-15.22a146 146 0 0 1 8.92 19.65a171 171 0 0 0-21.52 10.44a173 173 0 0 0-53.68 48.44A83.77 83.77 0 0 1 44 128m43.77 73.72a149 149 0 0 1 46.46-42.06a147 147 0 0 1 16-7.94a148.5 148.5 0 0 1 2.67 28a148.7 148.7 0 0 1-2.9 29.34a83.8 83.8 0 0 1-62.22-7.34Zm88.29-4.89c.56-5.68.86-11.4.86-17.14a172.6 172.6 0 0 0-3.72-35.54A149 149 0 0 1 208 140h3.11a84.07 84.07 0 0 1-35.05 56.83"
+              />
+            </svg>
+            <svg
+              class="text-white hover:text-[#B94E31]"
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill="currentColor"
+                d="M8.34 1C5.46 1 2.62 2.92 2.62 6.02c0 1.97 1.11 3.1 1.78 3.1c.28 0 .44-.77.44-.99c0-.26-.66-.82-.66-1.9c0-2.26 1.72-3.85 3.94-3.85c1.91 0 3.32 1.09 3.32 3.08c0 1.49-.6 4.28-2.53 4.28c-.7 0-1.3-.5-1.3-1.23c0-1.06.74-2.09.74-3.18c0-1.86-2.63-1.52-2.63.72c0 .47.06.99.27 1.42c-.39 1.67-1.18 4.15-1.18 5.87c0 .53.08 1.05.13 1.58c.1.11.05.1.19.04c1.41-1.94 1.36-2.31 2-4.85c.35.66 1.24 1.01 1.94 1.01c2.98 0 4.32-2.9 4.32-5.52c0-2.79-2.41-4.6-5.05-4.6"
+              />
+            </svg>
+          </div>
+          <div class="text-white flex">
+            <div>
+              <p class="hover:text-[#B94E31] duration-700 transition-all">
+                Webflow Templates
+              </p>
+            </div>
+            <div><p>by</p></div>
+            <div>
+              <p class="hover:text-[#B94E31] duration-700 transition-all">
+                128.digital.
+              </p>
+            </div>
+            <div><p>Power by</p></div>
+            <div>
+              <p class="hover:text-[#B94E31] duration-700 transition-all">
+                webflow
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
